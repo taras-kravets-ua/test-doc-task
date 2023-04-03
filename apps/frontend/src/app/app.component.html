@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="header">
+    <h1 class="title">test doc</h1>
+    <div class="actions">
+      <span>{{ zoom }}</span>
+      <button (click)="zoomPlus()">+</button>
+      <button (click)="zoomMinus()">-</button>
+      <button (click)="annotation.showResult()">Save</button>
+    </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

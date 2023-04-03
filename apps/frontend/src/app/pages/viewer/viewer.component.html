@@ -1,0 +1,7 @@
+<div #docum class="document-container" >
+  <ng-container *ngIf="document$ | async as doc">
+    <div  *ngFor="let page of doc.pages; index as i" [id]="i+1" page class="page">
+      <img [src]="baseUrl + page.name">
+    </div>
+  </ng-container>
+</div>

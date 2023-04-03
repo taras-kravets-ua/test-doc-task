@@ -1,0 +1,20 @@
+version: '3.0'
+
+services:
+  postgres:
+      container_name: db_postgres
+      image: postgres:12-alpine
+      environment:
+        PG_DATA: /var/lib/postgresql/data
+        POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      ports:
+        - "5432:5432"
+      volumes:
+        - pgdata_1:/var/lib/postgresql/data
+
+volumes:
+  pgdata_1:
+
+
